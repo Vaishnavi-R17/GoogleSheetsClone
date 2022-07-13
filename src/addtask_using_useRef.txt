@@ -1,0 +1,61 @@
+import { useRef } from "react";
+
+let uname=useRef("")
+let utaskname=useRef("")
+let utaskdetail=useRef("")
+let ustartdate=useRef("")
+let uenddate=useRef("")
+let status=useRef("")
+
+
+const handlesubmit(e)=>{
+    e.preventDefault();
+    var currentDate = new Date();
+        var startDate = new Date(uStartDate)
+        var endDate = new Date(uEndDate)
+        let status = "";
+
+        if (startDate > currentDate) {
+            status = "Not yet started"
+        } else if (currentDate >= ustartsate && currentDate <= uenddate) {
+            status = "On going"
+        } else {
+            status = "Completed"
+        }
+
+    const newTask=
+    {
+        username:uname.current.value,
+        taskname:utaskname.current.value,
+        taskdetails:utaskdetail.current.value,
+        startdate:ustartdate.current.value,
+        enddate:uenddate.current.value,
+        status
+    }
+    fetch("http://localhost:4002/tasks",
+            {
+                method: "POST", //what process
+                headers: { "Content-Type": "application/json" }, //type of data
+                body: JSON.stringify(newTask) // what data to post
+                //stringify-to convert given value into string i.e to a json format
+            })
+            .then(() => {
+                alert("New task added...!!!")
+                history.push("/home")//redirect to home page
+            })
+}
+
+
+return (
+        <div id="addtask">
+            <h1>Add task</h1>
+            <form onSubmit={handleAddTask}>
+                <label>Name:</label><input type="text" placeholder="Enter your name" value={uname} />
+                <label>Task:</label><input type="text" placeholder="Task name" value={utaskname} />
+                <label>Task detail:</label><textarea cols="30" rows="10" value={utaskdetail}></textarea>
+                <label>Start date:</label><input type="date" value={ustartdate} />
+                <label>End date:</label><input type="date" value={uenddate} />
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    );

@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "name": "Shalini",
+      "taskName": "SQL assignment",
+      "taskDetails": "complete it on time",
+      "uStartDate": "2022-07-06",
+      "uEndDate": "2022-07-15",
+      "status": "Ongoing",
+      "id": 1
+    },
+    {
+      "name": "Vaishnavi",
+      "taskName": "React project",
+      "taskDetails": "complete react project on movies list",
+      "uStartDate": "2022-07-13",
+      "uEndDate": "2022-07-17",
+      "status": "Pending",
+      "id": 2
+    },
+    {
+      "name": "Vaishnavi",
+      "taskName": "SQL mock",
+      "taskDetails": "prepare for SQL final mock",
+      "uStartDate": "2022-07-07", 
+      "uEndDate": "2022-07-11",
+      "status": "Completed",
+      "id": 3
+    },
+    {
+      "name": "Vaishnavi",
+      "taskName": "JS assignment",
+      "taskDetails": "complete JS assignment on traffic lights",
+      "uStartDate": "2022-07-10",
+      "uEndDate": "2022-07-15",
+      "status": "Ongoing",
+      "id": 4
+    }
+  ]
+}

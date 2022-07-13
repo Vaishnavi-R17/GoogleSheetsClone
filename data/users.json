@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "uname": "niranjan",
+      "email": "niranjan@gmail.com",
+      "password": "niranjan123",
+      "gender": "",
+      "id": 1
+    },
+    {
+      "uname": "Vaishnavi",
+      "email": "vaishnavi@gmail.com",
+      "password": "vaish",
+      "gender": "",
+      "id": 2
+    }
+  ]
+}
